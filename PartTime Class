@@ -1,0 +1,51 @@
+using Inheritance_Lab;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Inheritance_La
+{
+    public class PartTime : Employee
+    {
+        public double Rate { get; set; }
+        public double Hours { get; set; }
+
+
+        public PartTime()
+        {
+            Rate = 0.0;
+            Hours = 0.0;
+        }
+
+        // Parameterized constructor
+        public PartTime(string id, string name, string address, string phone, string sin, string dob, string debt, double rate, double hours)
+        {
+            Rate = rate;
+            Hours = hours;
+        }
+
+
+        public double GetPay()
+        {
+            double pay = Rate * Hours;
+
+            if (Hours > 40)
+            {
+                Hours = 40;
+                return Rate * Hours;
+                
+            }
+            else
+            {
+                return Hours * Rate;
+            }
+
+            
+            
+        }
+
+
+    }
+}
