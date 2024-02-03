@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Inheritance_Lab
+{
+    public class Employee
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Sin { get; set; }
+        public string Dob { get; set; }
+        public string Debt { get; set; }
+
+        
+        public Employee()
+        {
+            Id = "";
+            Name = "";
+            Address = "";
+            Phone = "";
+            Sin = "";
+            Dob = "";
+            Debt = "";
+        }
+
+        
+        public Employee(string id, string name, string address, string phone, string sin, string dob, string debt)
+        {
+            Id = id;
+            Name = name;
+            Address = address;
+            Phone = phone;
+            Sin = sin;
+            Dob = dob;
+            Debt = debt;
+        }
+
+        
+        
+    }
+
+
+}
