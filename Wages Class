@@ -1,0 +1,38 @@
+using Inheritance_Lab;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Inheritance_La
+{
+    public class Wages : Employee
+    {
+        public double Rate { get; set; }
+        public double Hours { get; set; }
+
+        public Wages(string id, string name, string address, string phone, long sin, string dob, string debt, double rate, double hours) 
+        {
+            Rate = rate;
+            Hours = hours;
+        }
+
+
+        public double GetPay()
+        {
+            double pay = Rate * Hours;
+        
+            if (Hours > 40) 
+            {
+                Rate = Rate * 1.5;
+                return pay;
+            }
+            else
+            {
+                return pay;
+            }
+        }
+    }
+
+}
